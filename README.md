@@ -81,7 +81,7 @@ Your site is now running at `http://localhost:8000`!
 
   
 
-# Mikołaj Zienkowicz ->
+### Mikołaj Zienkowicz ->
 
 1.  [GitHub](https://github.com/s0mething01)
 
@@ -89,6 +89,6 @@ Your site is now running at `http://localhost:8000`!
 
   
 
-# Jakub Kaczmarek ->
+### Jakub Kaczmarek ->
 
 1.  [GitHub](https://github.com/Ku3iK)
