@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         font-size: 1.6rem;
-        font-family: 'Poppins', sans-serif;
+        font-family: ${({ theme }) => theme.font.name};
     }
     #pageWrapper {
         overflow: hidden;
@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
     }
     button {
-        font-family: 'Poppins', sans-serif;
+        font-family: ${({ theme }) => theme.font.name};
         background-color: transparent;
         border: none;
     }
