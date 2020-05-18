@@ -3,8 +3,8 @@ import theme from "../themes/theme";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "../themes/GlobalStyle";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import Nav from "../components/Nav";
+import Footer from "../components/Footer/Footer";
+import Nav from "../components/Nav/Nav";
 
 
 const Layout = ({ children }) => {
