@@ -1,8 +1,10 @@
 import React from "react";
-import theme from '../themes/theme';
-import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../themes/GlobalStyle';
+import theme from "../themes/theme";
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "../themes/GlobalStyle";
 import { Helmet } from "react-helmet";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 
 
 const Layout = ({ children }) => {
@@ -11,15 +13,17 @@ const Layout = ({ children }) => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>EXPERT</title>
-                <meta name="description" content="Jestem młodym twórcą stron internetowych, jeśli potrzbujesz małej strony dla twojej firmy o schludnym wyglądzie, możliwością edycji treści, która dostosowana jest do wszystkich urządzeń, to dobrze trafiłeś!" />
+                <meta name="description" content="" />
                 <meta name="keywords" content="" />
             </Helmet>
             <div id="pageWrapper">
                 <GlobalStyle />
+                <Nav />
                 <main>
                     {children}
                 </main>
             </div>
+            <Footer />
         </ThemeProvider>
     )
 }
