@@ -16,5 +16,12 @@ export default {
         medium: 500,
         thin: 400,
         name: "'Poppins', sans-serif"
+    },
+    breakpoints: {
+        desktop: '1600px',
+        smallDesktop: '1200px',
+        tablet: '768px',
+        mobile: '480px'
+
     }
 }

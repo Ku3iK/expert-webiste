@@ -5,6 +5,7 @@ import GlobalStyle from "../themes/GlobalStyle";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer/Footer";
 import Nav from "../components/Nav/Nav";
+import routes from './paths'
 
 
 const Layout = ({ children }) => {
@@ -18,7 +19,7 @@ const Layout = ({ children }) => {
             </Helmet>
             <div id="pageWrapper">
                 <GlobalStyle />
-                <Nav />
+                <Nav routes={routes} />
                 <main>
                     {children}
                 </main>

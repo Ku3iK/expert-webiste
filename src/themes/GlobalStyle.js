@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-size: 1.6rem;
         font-family: ${({ theme }) => theme.font.name};
+        background-color: ${({ theme }) => theme.color.background};
     }
     #pageWrapper {
         overflow: hidden;
@@ -31,6 +32,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${({ theme }) => theme.font.name};
         background-color: transparent;
         border: none;
+    }
+    main {
+        min-height: 100vh
     }
 `;
 
