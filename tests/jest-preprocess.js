@@ -1,4 +1,3 @@
-const babelOptions = {
+module.exports = require("babel-jest").createTransformer({
     presets: ["babel-preset-gatsby"],
-}
-module.exports = require("babel-jest").createTransformer(babelOptions)
+})
