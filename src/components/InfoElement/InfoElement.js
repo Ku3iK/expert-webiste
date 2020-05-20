@@ -8,6 +8,8 @@ export default styled.button`
   background-color: #fff;
   border-bottom: 10px solid #31302d;
   color: #31302d;
+  margin: 20px;
+  flex-grow: 2;
   ::first-letter {
     text-transform: uppercase;
   }

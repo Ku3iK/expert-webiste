@@ -9,6 +9,8 @@ export default styled.h1`
   border-top: 4px solid #fcaa30;
   color: #31302d;
   padding: 5px 25px;
+  font-size: 5rem;
+  margin: 0 20px;
   ::first-letter {
     text-transform: uppercase;
   }
