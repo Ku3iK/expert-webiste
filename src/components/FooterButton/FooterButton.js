@@ -2,13 +2,13 @@ import React from "react"
 import styled from "styled-components"
 
 export default styled.button`
-  width: 146px;
-  height: 35px;
-  background-color: #fcaa30;
-  border-bottom: 4px solid #030303;
-  color: #fff;
+  height: 60px;
+  background-color: #efefef;
+  color: #31302d;
+  font-size: 2.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
   ::first-letter {
     text-transform: uppercase;
   }
-  cursor: pointer;
 `

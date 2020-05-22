@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
     *,*::before,*::after {
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-size: 1.6rem;
         font-family: ${({ theme }) => theme.font.name};
-        background-color: ${({ theme }) => theme.color.background};
+        /* background-color: ${({ theme }) => theme.color.background}; */
     }
     #pageWrapper {
         overflow: hidden;
@@ -36,6 +36,6 @@ const GlobalStyle = createGlobalStyle`
     main {
         min-height: 100vh
     }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle
