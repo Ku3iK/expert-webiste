@@ -34,8 +34,10 @@ const GlobalStyle = createGlobalStyle`
         border: none;
     }
     main {
-        min-height: 100vh
+        max-width: 1200px;
+        margin: 0 auto;
     }
+    
 `
 
 export default GlobalStyle
