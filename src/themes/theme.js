@@ -8,13 +8,14 @@ export default {
     },
     font: {
         xl: "7rem",
-        l: "3.5rem",
-        m: "2.6rem",
-        s: "2.3rem",
-        xs: "2rem",
+        l: "3.2rem",
+        m: "2.2rem",
+        s: "2.1rem",
+        xs: "1.7rem",
+        xxs: "1.6rem",
         bold: 700,
         medium: 500,
-        thin: 400,
+        thin: 300,
         name: "'Poppins', sans-serif"
     },
     breakpoints: {
