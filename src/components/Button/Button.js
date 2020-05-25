@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 export default styled.button`
-  padding: .5rem 4rem;
-  background-color: #fcaa30;
-  border-bottom: 4px solid #030303;
+  background-color: ${({ theme }) => theme.color.primary};
+  border-bottom: 4px solid ${({ theme }) => theme.color.secondary};
+  padding: 0.7rem 3rem;
   font-size: ${({ theme }) => theme.font.m};
   font-weight: ${({ theme }) => theme.font.bold};
   color: #fff;

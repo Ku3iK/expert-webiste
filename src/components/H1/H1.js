@@ -10,16 +10,14 @@ export default styled.h1`
   color: ${({ theme }) => theme.color.text};
   padding: 5px 40px;
   font-size: ${({ theme }) => theme.font.l};
-  ::first-letter {
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    font-size: ${({ theme }) => theme.font.m};
+    font-size: ${({ theme }) => theme.font.l};
     padding: 5px 30px;
     height: 30px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: ${({ theme }) => theme.font.xxs};
+    font-size: ${({ theme }) => theme.font.m};
     padding: 5px 15px;
     height: 25px;
   }
