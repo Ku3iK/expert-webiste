@@ -12,11 +12,7 @@ const Carousel = () => {
       <H1>Okna, drzwi, bramy</H1>
       <div className="carousel">
         <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
-        <CarouselElement
-          isActive
-          title="Okna drewniane"
-          photo={woodenWindow}
-        />
+        <CarouselElement isActive title="Okna drewniane" photo={woodenWindow} />
         <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
         <div className="arrow nextArrow"></div>
         <div className="arrow previousArrow"></div>
@@ -65,6 +61,9 @@ const CarouselWrapper = styled.div`
       @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
         transform: rotate(-45deg) translateY(0%, 0%);
       }
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        transform: rotate(-45deg) translate(2rem, 0%);
+      }
     }
     div.previousArrow {
       left: 0;
@@ -73,6 +72,9 @@ const CarouselWrapper = styled.div`
       transform: rotate(45deg) translate(0%, -60%);
       @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
         transform: rotate(45deg) translate(0%, -50%);
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        transform: rotate(45deg) translate(-2rem, 0%);
       }
     }
   }

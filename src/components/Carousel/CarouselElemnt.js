@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const CarouselElement = ({ photo, title, isActive }) => {
   return (
-    <CarouselElementWrapper className={isActive ? 'active' : null}>
+    <CarouselElementWrapper className={isActive ? "active" : null}>
       <img src={photo} alt={title} />
       <h3>{title}</h3>
     </CarouselElementWrapper>
@@ -29,7 +29,7 @@ const CarouselElementWrapper = styled.div`
     }
   }
   img {
-    width: 100%;
+    width: 80%;
   }
   h3 {
     color: ${({ theme }) => theme.color.secondary};
@@ -45,44 +45,49 @@ const CarouselElementWrapper = styled.div`
     }
   }
   &.active {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      ::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 80%;
-        background-color: ${({ theme }) => theme.color.primary};
-        left: 0;
-        top: 50%;
-        transform: translate(-6rem, -50%);
-        @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-          transform: translate(-3rem, -50%);
-        }
-      }
-      ::after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 80%;
-        background-color: ${({ theme }) => theme.color.primary};
-        right: 0;
-        top: 50%;
-        transform: translate(6rem, -50%);
-        @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-          transform: translate(3rem, -50%);
-        }
-      }
+    position: relative;
+    width: 400px;
+    height: 400px;
+    h3 {
+      font-size: ${({ theme }) => theme.font.l};
+    }
+    ::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 80%;
+      background-color: ${({ theme }) => theme.color.primary};
+      left: 0;
+      top: 50%;
+      transform: translate(-6rem, -50%);
       @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-        width: 300px;
-        height: 300px;
+        transform: translate(-3rem, -50%);
       }
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        width: 300px;
-        height: 300px;
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        display: none;
       }
     }
+    ::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 80%;
+      background-color: ${({ theme }) => theme.color.primary};
+      right: 0;
+      top: 50%;
+      transform: translate(6rem, -50%);
+      @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
+        transform: translate(3rem, -50%);
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        display: none;
+      }
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
+      width: 300px;
+      height: 300px;
+    }
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
     margin: 1rem 5rem 1rem 0;
     width: 200px;
