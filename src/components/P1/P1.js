@@ -1,15 +1,11 @@
-import styled from "styled-components";
+import React from "react"
+import styled from "styled-components"
 
-const P1 = styled.p`
+export default styled.p`
   width: 100%;
-  font-size: ${({ theme }) => theme.font.m};
-  color: ${({ color, theme }) => color ? color : theme.color.white};
+  font-size: 2.2rem;
+  color: ${props => props.color};
   ::first-letter {
     text-transform: uppercase;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: ${({ theme }) => theme.font.xs};
-  }
-`;
-
-export default P1;
+`
