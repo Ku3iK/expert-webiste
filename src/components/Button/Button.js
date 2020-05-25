@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 export default styled.button`
-  padding: .5rem 3rem;
+  padding: .7rem 3rem;
   background-color: #fcaa30;
   border-bottom: 4px solid #030303;
   font-size: ${({ theme }) => theme.font.m};
