@@ -31,7 +31,7 @@ const Footer = ({ routes }) => {
                         infoEl.map(({ text, link }) => <a href={link} target="_blank" key={text}><FooterButton>{text}</FooterButton></a>)
                     }
                 </div>
-                <p className="authors" >Zaprojektowana i wykonana przez <span>Mikołaja Zienkowicz i Jakuba Kaczmarka</span></p>
+                <p className="authors" >Zaprojektowana i wykonana przez <span>Mikołaja Zienkowicza i Jakuba Kaczmarka</span></p>
             </div>
         </FooterWrapper>
     );
