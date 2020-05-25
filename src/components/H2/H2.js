@@ -9,7 +9,8 @@ export default styled.h2`
     padding: 5px 30px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: ${({ theme }) => theme.font.xxs};
-    padding: 5px 10px;
+    font-size: ${({ theme }) => theme.font.m};
+    padding: 5px 0px;
+    letter-spacing: -1px;
   }
 `
