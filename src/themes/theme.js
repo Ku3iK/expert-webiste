@@ -8,7 +8,7 @@ export default {
     },
     font: {
         xl: "7rem",
-        l: "3.2rem",
+        l: "3rem",
         m: "2.2rem",
         s: "2.1rem",
         xs: "1.7rem",
