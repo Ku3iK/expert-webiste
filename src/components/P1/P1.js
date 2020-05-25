@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 export default styled.p`
   width: 100%;
-  font-size: 2.2rem;
-  color: ${props => props.color};
+  font-size: ${({ theme }) => theme.font.s};
+  color: ${({ color }) => color};
   ::first-letter {
     text-transform: uppercase;
   }
