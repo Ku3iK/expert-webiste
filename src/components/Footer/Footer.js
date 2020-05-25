@@ -28,7 +28,7 @@ const Footer = ({ routes }) => {
                 </ul>
                 <div className="infoWrapper">
                     {
-                        infoEl.map(({ text, link }) => <a href={link} target="_blank" key={text}><FooterButton>{text}</FooterButton></a>)
+                        infoEl.map(({ text, link }) => <a href={link} rel="noopener noreferrer" target="_blank" key={text}><FooterButton>{text}</FooterButton></a>)
                     }
                 </div>
                 <p className="authors" >Zaprojektowana i wykonana przez <span>Mikołaja Zienkowicza i Jakuba Kaczmarka</span></p>
