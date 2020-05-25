@@ -9,11 +9,11 @@ import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 const Carousel = () => {
   return (
     <CarouselWrapper>
-      <H1>Okna, drzwi, bramy garażowe</H1>
+      <H1>Okna, drzwi, bramy</H1>
       <div className="carousel">
         <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
         <CarouselElement
-          isActive={true}
+          isActive
           title="Okna drewniane"
           photo={woodenWindow}
         />
@@ -29,9 +29,14 @@ export default Carousel
 
 const CarouselWrapper = styled.div`
   margin: 20rem 0;
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    margin: 16rem 0;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin: 10rem 0 12rem;
+  }
   h1 {
     margin-bottom: 3rem;
-    padding: 5px 10px;
   }
   div.carousel {
     display: flex;
@@ -68,57 +73,6 @@ const CarouselWrapper = styled.div`
       transform: rotate(45deg) translate(0%, -60%);
       @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
         transform: rotate(45deg) translate(0%, -50%);
-      }
-    }
-    div.active.true {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      ::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 80%;
-        background-color: ${({ theme }) => theme.color.primary};
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: -6rem;
-        @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-          margin: 0;
-          margin-left: -3rem;
-        }
-      }
-      ::after {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 80%;
-        background-color: ${({ theme }) => theme.color.primary};
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-right: -6rem;
-        @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-          margin-right: -3rem;
-        }
-      }
-      @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-        width: 300px;
-        height: 300px;
-      }
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        width: 200px;
-        height: 200px;
-      }
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        width: 180px;
-        height: 180px;
-      }
-    }
-    div.active.false {
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-        opacity: 50%;
       }
     }
   }
