@@ -14,11 +14,12 @@ export default styled.h1`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: ${({ theme }) => theme.font.l};
     padding: 5px 30px;
-    height: 30px;
+    height: 40px;
+    letter-spacing: 0px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     font-size: ${({ theme }) => theme.font.m};
     padding: 5px 15px;
-    height: 25px;
+    height: auto;
   }
 `
