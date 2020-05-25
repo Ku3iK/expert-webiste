@@ -5,10 +5,11 @@ import GlobalStyle from "../themes/GlobalStyle";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer/Footer";
 import Nav from "../components/Nav/Nav";
+import Header from '../components/Header/Header';
 import routes from './paths'
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
     return (
         <ThemeProvider theme={theme}>
             <Helmet>
@@ -20,6 +21,10 @@ const Layout = ({ children }) => {
             <div id="pageWrapper">
                 <GlobalStyle />
                 <Nav routes={routes} />
+                {location.pathname === '/'
+                    ? <Header />
+                    : null
+                }
                 <main>
                     {children}
                 </main>
