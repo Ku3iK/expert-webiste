@@ -6,9 +6,9 @@ import pcvWindow from "../../../static/oknaPCV.png"
 import woodenWindow from "../../../static/oknaDrewniane.png"
 import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 
-const CarouselComponent = () => {
+const Carousel = () => {
   return (
-    <CarouselComponentWrapper>
+    <CarouselWrapper>
       <H1>Okna, drzwi, bramy garażowe</H1>
       <div className="carousel">
         <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
@@ -21,15 +21,16 @@ const CarouselComponent = () => {
         <div className="arrow nextArrow"></div>
         <div className="arrow previousArrow"></div>
       </div>
-    </CarouselComponentWrapper>
+    </CarouselWrapper>
   )
 }
 
-export default CarouselComponent
+export default Carousel
 
-const CarouselComponentWrapper = styled.div`
+const CarouselWrapper = styled.div`
+  margin: 20rem 0;
   h1 {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     padding: 5px 10px;
   }
   div.carousel {
@@ -38,7 +39,6 @@ const CarouselComponentWrapper = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
-    padding: 3rem 6rem;
     div.arrow {
       position: absolute;
       border: solid ${({ theme }) => theme.color.secondary};
