@@ -36,7 +36,7 @@ const Partners = () => {
 export default Partners;
 
 const PratnersWrapper = styled.section`
-    margin: 10rem 0;
+    margin: 20rem 0;
     .wrapper {
         display: flex;
         justify-content: space-between;

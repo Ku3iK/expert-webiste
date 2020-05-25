@@ -20,8 +20,7 @@ const AdditionalInformation = () => (
 export default AdditionalInformation
 
 const AdditionalInformationWrapper = styled.div`
-  margin: 10rem 0;
-  width: 100%;
+  margin: 20rem 0;
   h1 {
     margin-bottom: 6rem;
     padding: 5px 10px;
