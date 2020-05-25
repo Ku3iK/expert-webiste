@@ -23,8 +23,8 @@ const Layout = ({ children }) => {
                 <main>
                     {children}
                 </main>
+                <Footer routes={routes} />
             </div>
-            <Footer routes={routes} />
         </ThemeProvider>
     )
 }
