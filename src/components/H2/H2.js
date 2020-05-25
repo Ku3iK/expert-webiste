@@ -1,11 +1,7 @@
-import React from "react"
 import styled from "styled-components"
 
 export default styled.h2`
-  display: inline-block;
-  width: auto;
-  color: ${({ theme }) => theme.color.text};
-  padding: 5px 40px;
+  color: ${props => props.color};
   font-size: ${({ theme }) => theme.font.l};
   text-transform: uppercase;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
