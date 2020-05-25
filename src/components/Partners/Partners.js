@@ -37,6 +37,9 @@ export default Partners;
 
 const PratnersWrapper = styled.section`
     margin: 20rem 0;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        margin: 12rem 0;
+    }
     .wrapper {
         display: flex;
         justify-content: space-between;
