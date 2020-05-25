@@ -3,19 +3,10 @@ import styled from "styled-components"
 import H1 from "../H1/H1"
 import InfoElement from "../InfoElement/InfoElement"
 
-const AdditionalInformationWrapper = styled.div`
-  width: 60%;
-  div {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-`
-
 const AdditionalInformation = () => (
   <AdditionalInformationWrapper>
     <H1>Dodatkowe informacje</H1>
-    <div>
+    <div className="wrapper">
       <InfoElement>NIP 599 323 89 60</InfoElement>
       <InfoElement>REGON 382 755 633</InfoElement>
       <InfoElement>EXPERT Spółka z o.o.</InfoElement>
@@ -28,12 +19,16 @@ const AdditionalInformation = () => (
 
 export default AdditionalInformation
 
-//   height: 60px;
-//   padding: 5px 15px;
-//   font-size: 2.2rem;
-//   background-color: #fff;
-//   border-bottom: 10px solid #31302d;
-//   color: #31302d;
-//   ::first-letter {
-//     text-transform: uppercase;
-//   }
+const AdditionalInformationWrapper = styled.div`
+  margin: 10rem 0;
+  width: 100%;
+  h1 {
+    margin-bottom: 6rem;
+    padding: 5px 10px;
+  }
+  div.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+`
