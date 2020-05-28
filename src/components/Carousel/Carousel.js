@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import CarouselElement from "./CarouselElemnt"
 import styled from "styled-components"
 import H1 from "../H1/H1"
@@ -7,15 +7,69 @@ import woodenWindow from "../../../static/oknaDrewniane.png"
 import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 
 const Carousel = () => {
+  const [activeElementsIndex, setActiveElementsIndex] = useState([0, 1, 2])
+  const images = [
+    {
+      photo: woodenWindow,
+      title: "Okna 1",
+    },
+    {
+      photo: aluminiumWindow,
+      title: "Okna 2",
+    },
+    {
+      photo: woodenWindow,
+      title: "Okna 3",
+    },
+    {
+      photo: aluminiumWindow,
+      title: "Okna 4",
+    },
+    {
+      photo: woodenWindow,
+      title: "Okna 5",
+    },
+    {
+      photo: aluminiumWindow,
+      title: "Okna 6",
+    },
+  ]
+  const handleSwitchElement = direction => {
+    if (direction)
+      setActiveElementsIndex(
+        activeElementsIndex.map(el => (el === images.length - 1 ? 0 : el + 1))
+      )
+    else
+      setActiveElementsIndex(
+        activeElementsIndex.map(el => (el === 0 ? images.length - 1 : el - 1))
+      )
+  }
+
   return (
     <CarouselWrapper>
       <H1>Okna, drzwi, bramy</H1>
       <div className="carousel">
-        <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
-        <CarouselElement isActive title="Okna drewniane" photo={woodenWindow} />
-        <CarouselElement title="Okna aluminiowe" photo={aluminiumWindow} />
-        <div className="arrow nextArrow"></div>
-        <div className="arrow previousArrow"></div>
+        <CarouselElement
+          title={images[activeElementsIndex[0]].title}
+          photo={images[activeElementsIndex[0]].photo}
+        />
+        <CarouselElement
+          isActive
+          title={images[activeElementsIndex[1]].title}
+          photo={images[activeElementsIndex[1]].photo}
+        />
+        <CarouselElement
+          title={images[activeElementsIndex[2]].title}
+          photo={images[activeElementsIndex[2]].photo}
+        />
+        <div
+          className="arrow nextArrow"
+          onClick={() => handleSwitchElement(true)}
+        ></div>
+        <div
+          className="arrow previousArrow"
+          onClick={() => handleSwitchElement(false)}
+        ></div>
       </div>
     </CarouselWrapper>
   )
