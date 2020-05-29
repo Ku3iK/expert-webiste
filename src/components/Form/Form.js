@@ -19,7 +19,7 @@ const Form = () => {
           <textarea name="content" id="content" resize="none"></textarea>
         </div>
         <div className="button">
-          <Button>Wyślij</Button>
+          <Button type="submit">Wyślij</Button>
         </div>
       </form>
     </FormWrapper>
