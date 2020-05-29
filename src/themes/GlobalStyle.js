@@ -40,6 +40,9 @@ const GlobalStyle = createGlobalStyle`
             padding: 0 2rem;
         }
     }
+    textarea, input{
+        font-family: ${({ theme }) => theme.font.name};
+    }
     
 `
 
