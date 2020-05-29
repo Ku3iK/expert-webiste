@@ -15,7 +15,7 @@ export default ContactInformation
 
 const ContactInformationWrapper = styled.div`
   margin: 2rem 0;
-  padding: 0.5rem 2rem;
+  padding: 0  0 0 2rem;
   border-left: 10px solid ${({ theme }) => theme.color.primary};
   h3 {
     font-size: ${({ theme }) => theme.font.m};
@@ -24,5 +24,8 @@ const ContactInformationWrapper = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
       font-size: ${({ theme }) => theme.font.s};
     }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 0  0 0 1rem;
   }
 `
