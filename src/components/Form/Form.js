@@ -35,14 +35,14 @@ const FormWrapper = styled.div`
     justify-content: center;
     div {
       position: relative;
-      margin: 2rem 0;
-      padding: 0.5rem;
+      margin: 1rem 0;
+      /* padding: 0.5rem; */
       color: ${({ theme }) => theme.color.secondary};
       input,
       textarea {
         border: none;
         border-left: 10px solid ${({ theme }) => theme.color.primary};
-        padding: 1rem 2rem;
+        padding: 1.5rem 3rem;
         resize: none;
         overflow: visible;
         width: 100%;
@@ -50,9 +50,15 @@ const FormWrapper = styled.div`
         :focus {
           outline-color: ${({ theme }) => theme.color.primary};
         }
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+          padding: 1rem 2rem;
+        }
       }
       textarea {
         height: 300px;
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+          height: 200px;
+        }
       }
     }
     h4 {
@@ -69,9 +75,9 @@ const FormWrapper = styled.div`
     div.button {
       display: flex;
       justify-content: flex-end;
-      @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+      /* @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         justify-content: center;
-      }
+      } */
     }
   }
 `
