@@ -94,6 +94,7 @@ const CarouselWrapper = styled.div`
     align-items: center;
     position: relative;
     width: 100%;
+    margin-top: 4rem;
     div.arrow {
       position: absolute;
       border: solid ${({ theme }) => theme.color.secondary};
@@ -116,7 +117,7 @@ const CarouselWrapper = styled.div`
         transform: rotate(-45deg) translateY(0%, 0%);
       }
       @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        transform: rotate(-45deg) translate(2rem, 0%);
+        transform: rotate(-45deg) translate(1rem, -50%);
       }
     }
     div.previousArrow {
@@ -128,7 +129,7 @@ const CarouselWrapper = styled.div`
         transform: rotate(45deg) translate(0%, -50%);
       }
       @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-        transform: rotate(45deg) translate(-2rem, 0%);
+        transform: rotate(45deg) translate(-1rem, -50%);
       }
     }
   }

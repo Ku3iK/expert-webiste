@@ -18,18 +18,11 @@ const CarouselElementWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${({ theme }) => theme.color.white};
-  margin: 2rem 10rem 2rem 0;
   padding: 1rem 3rem;
   width: 300px;
-  height: 300px;
-  :nth-of-type(3) {
-    margin: 2rem 0;
-    @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-      margin: 1rem 0;
-    }
-  }
   img {
-    width: 80%;
+    width: 100%;
+    padding: 0 2rem;
   }
   h3 {
     color: ${({ theme }) => theme.color.secondary};
@@ -44,12 +37,44 @@ const CarouselElementWrapper = styled.div`
       font-size: ${({ theme }) => theme.font.xxs};
     }
   }
+  @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
+    width: 200px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 200px;
+    opacity: 50%;
+    &.active {
+      opacity: 100%;
+    }
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    display: none;
+    &.active {
+      display: block;
+      padding: 0;
+    }
+  }
   &.active {
     position: relative;
     width: 400px;
-    height: 400px;
+    margin: 2rem 10rem;
     h3 {
       font-size: ${({ theme }) => theme.font.l};
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
+      width: 300px;
+      margin: 2rem 6rem;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet})  {
+      h3 {
+        font-size: ${({ theme }) => theme.font.m};
+      }
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      width: 100%;
+      margin: 2rem 0;
+      max-width: 320px;
     }
     ::before {
       content: "";
@@ -82,23 +107,6 @@ const CarouselElementWrapper = styled.div`
       @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         display: none;
       }
-    }
-    @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-      width: 300px;
-      height: 300px;
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-    margin: 1rem 5rem 1rem 0;
-    width: 200px;
-    height: 200px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    width: 200px;
-    height: 200px;
-    opacity: 50%;
-    &.active {
-      opacity: 100%;
     }
   }
 `
