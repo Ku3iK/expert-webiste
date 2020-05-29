@@ -7,8 +7,8 @@ export default {
         background: "#EFEFEF",
     },
     font: {
-        xl: "7rem",
-        l: "3rem",
+        xl: "5rem",
+        l: "3.5rem",
         m: "2.2rem",
         s: "2.1rem",
         xs: "1.7rem",
