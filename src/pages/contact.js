@@ -7,12 +7,12 @@ import ContactInformation from "../components/ContactInformations/ContactInforma
 
 const Contact = () => (
   <ContactPage>
-    <H1>Skontaktuj się z nami</H1>
+    <H1>Napisz do nas</H1>
     <div className="contactWrapper">
       <div>
         <P2>
           Zapraszamy do kontaktu z nami poprzez formularz zgłoszeniowy lub
-          kontakt telefoniczny i mailowy.
+          kontakt telefoniczny i mailowy. Pamiętaj, kto pyta, nie błądzi! Chętnie odpowiemy na twoję pytania, rozwiejemy wątpliwości i doradzimy w wyborze produktów.
         </P2>
         <div>
           <ContactInformation title="telefon" content="534 534 542" />
@@ -45,9 +45,9 @@ const ContactPage = styled.div`
   }
   div.contactWrapper {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin: 2rem 0 0 0;
+    margin: 4rem 0 0 0;
     div {
       width: 100%;
     }
@@ -56,20 +56,22 @@ const ContactPage = styled.div`
       flex-direction: column;
       justify-content: center;
       p:first-child {
-        padding: 3rem 0;
+        margin-bottom: 2rem;
         width: 80%;
-        font-size: ${({ theme }) => theme.font.m};
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+          width: 100%;
+        }
       }
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       display: flex;
       flex-direction: column;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    /* @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
       display: flex;
       p:first-child {
         font-size: ${({ theme }) => theme.font.s};
       }
-    }
+    } */
   }
 `
