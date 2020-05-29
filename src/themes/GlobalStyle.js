@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
         max-width: 1200px;
         margin: 0 auto;
         @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
-            padding: 0 3rem;
+            padding: 0 2rem;
         }
     }
     
