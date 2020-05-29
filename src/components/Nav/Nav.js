@@ -28,12 +28,16 @@ export default Nav;
 
 const Container = styled.nav`
     background-color: ${({ theme }) => theme.color.white};
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-right: 5px solid ${({ theme }) => theme.color.primary};
     padding: 0 30px;
-    position: relative;
+    /* position: relative; */
     z-index: 10;
     & > a{
         display: flex;

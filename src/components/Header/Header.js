@@ -45,6 +45,7 @@ const HeaderBaner = styled.header`
     background-position: center center;
     position: relative;
     overflow: hidden;
+    margin-top: 5rem;
     .wrapper {
         position: relative;
         z-index: 1;

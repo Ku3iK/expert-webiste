@@ -36,12 +36,12 @@ const Contact = () => (
 export default Contact
 
 const ContactPage = styled.div`
-  margin: 10rem 0;
+  margin: 12rem 0 10rem;
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    margin: 6rem 0;
+    margin: 12rem 0 6rem ;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    margin: 2rem 0 6rem;
+    margin: 12rem 0 6rem;
   }
   div.contactWrapper {
     display: flex;
