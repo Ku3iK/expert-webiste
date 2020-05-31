@@ -75,4 +75,8 @@ const GalleryConainer = styled.section`
 	h1 {
 		margin-bottom: 6rem;
 	}
+	div {
+		display: flex;
+		flex-wrap: wrap;
+	}
 `;
