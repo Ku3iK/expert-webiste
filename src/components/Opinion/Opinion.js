@@ -6,8 +6,8 @@ import OpinionElement from "./OpinionElement"
 const Opinion = ({ opinionData }) => {
   return (
     <div>
-      {opinionData.map(({ img }, index) => (
-        <OpinionElement key={index} src={img} />
+      {opinionData.map((el, index) => (
+        <OpinionElement key={index} src={el} />
       ))}
     </div>
   )

@@ -30,27 +30,13 @@ const NotFoundPage = () => {
   ]
 
   const opinionData = [
-    {
-      img: opinion1,
-    },
-    {
-      img: opinion2,
-    },
-    {
-      img: opinion3,
-    },
-    {
-      img: opinion4,
-    },
-    {
-      img: opinion5,
-    },
-    {
-      img: opinion6,
-    },
-    {
-      img: opinion7,
-    },
+    opinion1,
+    opinion2,
+    opinion3,
+    opinion4,
+    opinion5,
+    opinion6,
+    opinion7,
   ]
   return (
     <Container>
