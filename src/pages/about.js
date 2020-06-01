@@ -6,6 +6,7 @@ import H1 from "../components/H1/H1"
 import img1 from "../assets/images/about1.svg"
 import img2 from "../assets/images/about2.svg"
 
+<<<<<<< HEAD
 import opinion1 from "../assets/images/opinion/opinia1.jpg"
 import opinion2 from "../assets/images/opinion/opinia2.jpg"
 import opinion3 from "../assets/images/opinion/opinia3.jpg"
@@ -14,6 +15,16 @@ import opinion5 from "../assets/images/opinion/opinia5.jpg"
 import opinion6 from "../assets/images/opinion/opinia6.jpg"
 import opinion7 from "../assets/images/opinion/opinia7.jpg"
 import Opinion from "../components/Opinion/Opinion"
+=======
+// import opinion1 from "../assets/images/opinion/opinia1.png"
+// import opinion2 from "../assets/images/opinion/opinia2.png"
+// import opinion3 from "../assets/images/opinion/opinia3.png"
+// import opinion4 from "../assets/images/opinion/opinia4.png"
+// import opinion5 from "../assets/images/opinion/opinia5.png"
+// import opinion6 from "../assets/images/opinion/opinia6.png"
+// import opinion7 from "../assets/images/opinion/opinia7.png"
+// import Opinion from "../components/Opinion/Opinion"
+>>>>>>> 5606209467ae4b18ab38e5ebb6c4a0c7881ea9d1
 
 const NotFoundPage = () => {
   const aboutData = [
@@ -29,15 +40,15 @@ const NotFoundPage = () => {
     },
   ]
 
-  const opinionData = [
-    opinion1,
-    opinion2,
-    opinion3,
-    opinion4,
-    opinion5,
-    opinion6,
-    opinion7,
-  ]
+  // const opinionData = [
+  //   opinion1,
+  //   opinion2,
+  //   opinion3,
+  //   opinion4,
+  //   opinion5,
+  //   opinion6,
+  //   opinion7,
+  // ]
   return (
     <Container>
       <H1>Kim jesteśmy?</H1>
