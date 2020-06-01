@@ -47,10 +47,10 @@ const NotFoundPage = () => {
         content={aboutData[1].content}
         isFirst
       />
-      <H1>Nasze opinie</H1>
+      {/* <H1>Nasze opinie</H1>
       <OpinionContainer>
         <Opinion opinionData={opinionData} />
-      </OpinionContainer>
+      </OpinionContainer> */}
     </Container>
   )
 }
