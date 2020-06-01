@@ -65,7 +65,7 @@ const AboutUsWrapper = styled.div`
     div:first-of-type {
       width: 100%;
     }
-    :nth-child(odd) {
+    :nth-child(even) {
       border-bottom: none;
       border-top: 20px solid ${({ theme }) => theme.color.secondary};
     }
