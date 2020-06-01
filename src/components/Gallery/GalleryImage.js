@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const GalleryImage = ({ src, alt }) => {
+const GalleryImage = ({ src, alt, handleActivateBrowser, index }) => {
     return (
-        <GalleryImageWrapper src={src}>
+        <GalleryImageWrapper onClick={() => handleActivateBrowser(index)} src={src}>
             <div className="image"></div>
         </GalleryImageWrapper>
     );
@@ -32,18 +32,24 @@ const GalleryImageWrapper = styled.article`
         }
         @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
             max-width: 600px;
-            min-height: 220px;
+            min-height: 240px;
         }
         @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-            min-height: 200px;
+            min-height: 250px;
+        }
+        @media (max-width: 360px) {
+            min-height: 180px;
         }
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
         max-width: 600px;
-        min-height: 220px;
+        min-height: 240px;
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
         margin: 0 0 2rem 0;
-        min-height: 200px;
+        min-height: 250px;
+    }
+    @media (max-width: 360px) {
+        min-height: 180px;
     }
 `;
