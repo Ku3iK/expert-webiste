@@ -10,7 +10,7 @@ const NotFoundPage = () => {
     {
       img: img1,
       content:
-        "Expert to firma z tradycjami i jakością świadczących usług, które cieszą się ogromnym uznaniem i zadowoleniem wśród klientów. Zapraszamy do zapoznania się z naszą ofertą.",
+        "Expert to firma z tradycjami i jakością świadczonych usług, które cieszą się ogromnym uznaniem i zadowoleniem klientów. Zapraszamy do zapoznania się z ofertą.",
     },
     {
       img: img2,
