@@ -46,7 +46,7 @@ const Carousel = () => {
 
   return (
     <CarouselWrapper>
-      <H1>Okna, drzwi, bramy</H1>
+      <H1>Okna, drzwi, rolety, bramy</H1>
       <div className="carousel">
         <CarouselElement
           title={images[activeElementsIndex[0]].title}
