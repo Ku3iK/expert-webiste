@@ -7,6 +7,7 @@ import Footer from "../components/Footer/Footer"
 import Nav from "../components/Nav/Nav"
 import Header from "../components/Header/Header"
 import routes from "./paths"
+import routesDe from "./pathsde"
 
 const Layout = ({ children, location }) => {
   return (
@@ -26,7 +27,12 @@ const Layout = ({ children, location }) => {
       <div id="pageWrapper">
         <GlobalStyle />
         <Nav routes={routes} />
+        {/^\/de.*$/.test(location.pathname)
+          ? <Nav routes={routesDe} />
+          : <Nav routes={routes} />
+        }
         {location.pathname === "/" ? <Header /> : null}
+        {location.pathname === "/de" ? <Header /> : null}
         <main>{children}</main>
         <Footer routes={routes} />
       </div>
