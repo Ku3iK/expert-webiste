@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Logo from "../../assets/icons/logoBig.inline.svg";
 import FooterButton from './FooterButton';
 
-const Footer = ({ routes }) => {
+const Footer = ({ routes, text, authors }) => {
     const infoEl = [
         { text: '790 364 021', link: "tel:+790364021" },
         { text: 'Stare Polichno ul.Skwierzyńska 7', link: "https://www.google.com/maps/place/Skwierzy%C5%84ska+7,+66-431+Stare+Polichno/@52.7196416,15.4263333,17z/data=!3m1!4b1!4m5!3m4!1s0x4706e75b1a90b8b5:0xa35d5ebbcf6c468a!8m2!3d52.7196416!4d15.428522" },
@@ -18,7 +18,7 @@ const Footer = ({ routes }) => {
                     <Logo></Logo>
                     <p>© 2020 All rights reserved.</p>
                 </div>
-                <P2 className="description">Firma Expert od lat zajmuje się montażami stolarki otworowej, a od 2017 roku również sprzedażą i doradztwem w tej dziedzinie. Posiadamy w swojej ofercie szeroką gamę produktów, które z pewnością spełnią Państwa wymagania. Znajdziecie Państwo u nas okna z PCV, aluminium oraz drewna, oczywiście nie brakuje w ofercie także rolet zewnętrznych czy żaluzji z napędami zarówno ręcznymi, jak i elektrycznymi, czy solarnymi.</P2>
+                <P2 className="description">{text}</P2>
                 <ul>
                     {routes.map(({ path, name }, index) => (
                         <li key={index}>
@@ -31,7 +31,7 @@ const Footer = ({ routes }) => {
                         infoEl.map(({ text, link }) => <a href={link} rel="noopener noreferrer" target="_blank" key={text}><FooterButton>{text}</FooterButton></a>)
                     }
                 </div>
-                <p className="authors" >Zaprojektowana i wykonana przez <span>Mikołaja Zienkowicza i Jakuba Kaczmarka</span></p>
+                <p className="authors" >{authors} <span>Mikołaja Zienkowicza i Jakuba Kaczmarka</span></p>
             </div>
         </FooterWrapper>
     );

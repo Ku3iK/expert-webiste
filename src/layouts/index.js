@@ -10,6 +10,18 @@ import routes from "./paths"
 import routesDe from "./pathsde"
 
 const Layout = ({ children, location }) => {
+  const text = `Firma expert od lat zajmuje się montażami stolarki otworowej, a od 2017 roku również
+  sprzedażą i doradztwem w tej dziedzinie. posiadamy w swojej ofercie szeroką gamę
+  produktów, które z pewnością spełnią państwa wymagania. znajdziecie państwo u nas okna z
+  pcv, aluminium oraz drewna, oczywiście nie brakuje w ofercie także rolet zewnętrznych czy
+  żaluzji z napędami zarówno ręcznymi, jak i elektrycznymi, czy solarnymi.`;
+  const authors = "Stronę zaprojektowali i wykonali";
+  const authorsDe = "Die Website wurde entworfen und erstellt";
+  const textDe = `Unsere Firma ist seit ….Jahren beschäftigt mit der Installation von Fenstern, Fassaden und Türen
+  und ab 2017 auch mit Vertrieb und Beratung in diesem Bereich. Wir bieten eine breite Palette von
+  Produkten an, die sicherlich Ihren Anforderungen entsprechen. Bei uns finden Sie Fenster aus PVC,
+  Aluminium und Holz, natürlich gibt es auch Rollläden oder Raffstore mit manuellen, elektrischen
+  oder Solarantrieben.`;
   return (
     <ThemeProvider theme={theme}>
       <Helmet>
@@ -34,7 +46,10 @@ const Layout = ({ children, location }) => {
         {location.pathname === "/" ? <Header /> : null}
         {location.pathname === "/de" ? <Header /> : null}
         <main>{children}</main>
-        <Footer routes={routes} />
+        {/^\/de.*$/.test(location.pathname)
+          ? <Footer routes={routesDe} text={textDe} authors={authorsDe} />
+          : <Footer routes={routes} text={text} authors={authors} />
+        }
       </div>
     </ThemeProvider>
   )

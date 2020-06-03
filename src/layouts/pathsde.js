@@ -1,14 +1,14 @@
 export default [
     {
-        name: "Strona główna",
+        name: "Zuhause",
         path: "/de"
     },
     {
-        name: "O nas",
+        name: "Über uns",
         path: "/de/about"
     },
     {
-        name: "Galeria",
+        name: "Galerie",
         path: "/de/gallery"
     },
     {
