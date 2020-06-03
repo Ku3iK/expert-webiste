@@ -7,21 +7,21 @@ import ContactInformation from "../../components/ContactInformations/ContactInfo
 
 const Contact = () => (
   <ContactPage>
-    <H1>Napisz do nas</H1>
+    <H1>Unsere Kontaktdaten</H1>
     <div className="contactWrapper">
       <div>
         <P2>
-          Zapraszamy do kontaktu z nami poprzez formularz zgłoszeniowy lub
-          kontakt telefoniczny i mailowy. Pamiętaj, kto pyta, nie błądzi! Chętnie odpowiemy na twoję pytania, rozwiejemy wątpliwości i doradzimy w wyborze produktów.
+          Sie können uns gern über das Bewerbungsformular , E -Mail oder per
+          Telefon erreichen.
         </P2>
         <div>
           <ContactInformation title="telefon" content="534 534 542" />
           <ContactInformation
-            title="mail"
+            title="e-mail"
             content="expert.szczenic@gmial.com"
           />
           <ContactInformation
-            title="adres"
+            title="adresse"
             content="ul. blafsfsd 45 45-532 Szczecin"
           />
         </div>

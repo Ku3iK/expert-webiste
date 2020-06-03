@@ -20,12 +20,12 @@ const NotFoundPage = () => {
     {
       img: img1,
       content:
-        "Expert to firma z tradycjami i jakością świadczonych usług, które cieszą się ogromnym uznaniem i zadowoleniem klientów. Zapraszamy do zapoznania się z ofertą.",
+        "Expert ist ein Unternehmen mit Traditionen und Servicequalität, das große Anerkennung und Kundenzufriedenheit genießt. Wir laden Sie ein, sich mit dem Angebot vertraut zu machen.",
     },
     {
       img: img2,
       content:
-        "Firma Expert od lat zajmuje się montażami stolarki otworowej, posiadamy w swojej ofercie szeroką gamę produktów, które z pewnością spełnią Państwa wymagania.",
+        "Unsere Firma ist seit Expert Jahren beschäftigt mit der Installation von Fenstern, Wir bieten eine breite Palette von Produkten an, die sicherlich Ihren Anforderungen entsprechen.",
     },
   ]
 
@@ -40,14 +40,14 @@ const NotFoundPage = () => {
   ]
   return (
     <Container>
-      <H1>Kim jesteśmy?</H1>
+      <H1>Wer wir sind?</H1>
       <AboutUsElement img={aboutData[0].img} content={aboutData[0].content} />
       <AboutUsElement
         img={aboutData[1].img}
         content={aboutData[1].content}
         isFirst
       />
-      <H1>Nasze opinie</H1>
+      <H1>Unsere Meinungen</H1>
       <OpinionContainer>
         <Opinion opinionData={opinionData} />
       </OpinionContainer>
