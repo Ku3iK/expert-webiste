@@ -5,7 +5,7 @@ import H1 from "../H1/H1"
 import woodenWindow from "../../../static/oknaDrewniane.png"
 import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 
-const Carousel = () => {
+const Carousel = ({ title }) => {
   const [activeElementsIndex, setActiveElementsIndex] = useState([0, 1, 2])
   const images = [
     {
@@ -46,7 +46,7 @@ const Carousel = () => {
 
   return (
     <CarouselWrapper>
-      <H1>Okna, drzwi, rolety, bramy</H1>
+      <H1>{title}</H1>
       <div className="carousel">
         <CarouselElement
           title={images[activeElementsIndex[0]].title}

@@ -27,10 +27,11 @@ const Layout = ({ children, location }) => {
       <div id="pageWrapper">
         <GlobalStyle />
         <Nav routes={routes} />
-        {/^\/de.*$/.test(location.pathname)
-          ? <Nav routes={routesDe} />
-          : <Nav routes={routes} />
-        }
+        {/^\/de.*$/.test(location.pathname) ? (
+          <Nav routes={routesDe} />
+        ) : (
+          <Nav routes={routes} />
+        )}
         {location.pathname === "/" ? <Header /> : null}
         {location.pathname === "/de" ? <Header /> : null}
         <main>{children}</main>
