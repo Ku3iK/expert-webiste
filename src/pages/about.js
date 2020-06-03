@@ -25,7 +25,7 @@ const NotFoundPage = () => {
     {
       img: img2,
       content:
-        "Firma Expert od lat zajmuje się montażami stolarni otworowej, posiadamy w swojej ofercie szeroką gamę produktów, które z pewnością spełnią Państwa wymagania.",
+        "Firma Expert od lat zajmuje się montażami stolarki otworowej, posiadamy w swojej ofercie szeroką gamę produktów, które z pewnością spełnią Państwa wymagania.",
     },
   ]
 
