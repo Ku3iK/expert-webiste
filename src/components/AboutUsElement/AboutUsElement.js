@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import P2 from "../P2/P2";
+import P2 from "../P2/P2"
 
 const AboutUsElement = ({ img, content, isFirst }) => {
   return (
@@ -39,7 +39,7 @@ const AboutUsWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center center;
     width: 48%;
-    order: ${({ isFirst }) => isFirst ? 2 : -1}
+    order: ${({ isFirst }) => (isFirst ? 2 : -1)};
   }
   div.first {
     order: -1;
@@ -53,7 +53,7 @@ const AboutUsWrapper = styled.div`
       }
     }
     div:first-of-type {
-      order: ${({ isFirst }) => isFirst ? 2 : -1}
+      order: ${({ isFirst }) => (isFirst ? 2 : -1)};
     }
     .image {
       width: 45%;
@@ -86,7 +86,7 @@ const AboutUsWrapper = styled.div`
       p {
         font-size: ${({ theme }) => theme.font.xxs};
         line-height: 3rem;
-        letter-spacing: -.2px;
+        letter-spacing: -0.2px;
       }
     }
     .image {
