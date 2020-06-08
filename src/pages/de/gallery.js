@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import styled from "styled-components"
 import H1 from "../../components/H1/H1"
 import Gallery from "../../components/Gallery/Gallery"
