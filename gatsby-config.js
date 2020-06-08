@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `EXPERT`,
@@ -51,6 +53,12 @@ module.exports = {
     //     // icon: `src/images/gatsby-icon.png`,
     //   },
     // },
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATO_API_KEY,
+      },
+    },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
