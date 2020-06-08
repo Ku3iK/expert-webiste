@@ -7,19 +7,18 @@ import H1 from "../H1/H1"
 import Button from "../Button/Button"
 import img1 from "../../../static/durtexLogo.png"
 import img2 from "../../../static/fartProductLogo.png"
-const Partners = ({ title, firstP, secondP, buttonContent }) => {
+
+const Partners = ({ title, partners, buttonContent, isDE }) => {
   return (
     <PratnersWrapper>
       <H1>{title}</H1>
       <div className="wrapper">
-        <Partner file={img1}>
-          <P2>{firstP}</P2>
-          <Button>{buttonContent}</Button>
-        </Partner>
-        <Partner file={img2}>
-          <P2>{secondP}</P2>
-          <Button>{buttonContent}</Button>
-        </Partner>
+        {partners.map(({ partnerdescription, partnerdescriptionde, parnerpagelink }, index) => (
+          <Partner key={index}>
+            <P2>{isDE ? partnerdescriptionde : partnerdescription}</P2>
+            <Button to={parnerpagelink}>{buttonContent}</Button>
+          </Partner>
+        ))}
       </div>
     </PratnersWrapper>
   )

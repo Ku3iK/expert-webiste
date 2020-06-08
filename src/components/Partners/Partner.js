@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Partner = ({ file, children }) => {
     return (
         <PartnerWarpper>
-            <img src={file} alt="dfsd" />
+            <img src={file ? file : null} alt="dfsd" />
             {children}
         </PartnerWarpper>
     );
