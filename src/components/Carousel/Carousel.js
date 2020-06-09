@@ -5,42 +5,16 @@ import H1 from "../H1/H1"
 import woodenWindow from "../../../static/oknaDrewniane.png"
 import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 
-const Carousel = ({ title }) => {
+const Carousel = ({ title, elements }) => {
   const [activeElementsIndex, setActiveElementsIndex] = useState([0, 1, 2])
-  const images = [
-    {
-      photo: woodenWindow,
-      title: "Okna 1",
-    },
-    {
-      photo: aluminiumWindow,
-      title: "Okna 2",
-    },
-    {
-      photo: woodenWindow,
-      title: "Okna 3",
-    },
-    {
-      photo: aluminiumWindow,
-      title: "Okna 4",
-    },
-    {
-      photo: woodenWindow,
-      title: "Okna 5",
-    },
-    {
-      photo: aluminiumWindow,
-      title: "Okna 6",
-    },
-  ]
   const handleSwitchElement = direction => {
     if (direction)
       setActiveElementsIndex(
-        activeElementsIndex.map(el => (el === images.length - 1 ? 0 : el + 1))
+        activeElementsIndex.map(el => (el === elements.length - 1 ? 0 : el + 1))
       )
     else
       setActiveElementsIndex(
-        activeElementsIndex.map(el => (el === 0 ? images.length - 1 : el - 1))
+        activeElementsIndex.map(el => (el === 0 ? elements.length - 1 : el - 1))
       )
   }
 
@@ -49,17 +23,17 @@ const Carousel = ({ title }) => {
       <H1>{title}</H1>
       <div className="carousel">
         <CarouselElement
-          title={images[activeElementsIndex[0]].title}
-          photo={images[activeElementsIndex[0]].photo}
+          title={elements[activeElementsIndex[0]].name}
+          photo={elements[activeElementsIndex[0]].url}
         />
         <CarouselElement
           isActive
-          title={images[activeElementsIndex[1]].title}
-          photo={images[activeElementsIndex[1]].photo}
+          title={elements[activeElementsIndex[1]].name}
+          photo={elements[activeElementsIndex[1]].url}
         />
         <CarouselElement
-          title={images[activeElementsIndex[2]].title}
-          photo={images[activeElementsIndex[2]].photo}
+          title={elements[activeElementsIndex[2]].name}
+          photo={elements[activeElementsIndex[2]].url}
         />
         <div
           className="arrow nextArrow"

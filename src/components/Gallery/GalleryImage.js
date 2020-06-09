@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const GalleryImage = ({ src, alt, handleActivateBrowser, index }) => {
+const GalleryImage = ({ src, handleActivateBrowser, index }) => {
     return (
         <GalleryImageWrapper onClick={() => handleActivateBrowser(index)} src={src}>
             <div className="image"></div>

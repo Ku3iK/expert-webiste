@@ -2,24 +2,24 @@ import React from "react"
 import styled from "styled-components"
 import Button from "../Button/Button"
 
-const Form = () => {
+const Form = ({ labels }) => {
   return (
     <FormWrapper>
       <form name="contact" method="POST" data-netlify="true" action="/succes">
         <div>
-          <h4>Tytuł</h4>
+          <h4>{labels[0]}</h4>
           <input type="text" name="title" id="title" />
         </div>
         <div>
-          <h4>Mail</h4>
+          <h4>{labels[1]}</h4>
           <input type="mail" name="mail" id="mail" />
         </div>
         <div>
-          <h4>Pytanie do nas</h4>
+          <h4>{labels[2]}</h4>
           <textarea name="content" id="content" resize="none"></textarea>
         </div>
         <div className="button">
-          <Button type="submit">Wyślij</Button>
+          <Button type="submit">{labels[3]}</Button>
         </div>
       </form>
     </FormWrapper>

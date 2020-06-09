@@ -6,7 +6,7 @@ const Opinion = ({ opinionData }) => {
   return (
     <div>
       {opinionData.map((el, index) => (
-        <OpinionElement key={index} src={el} />
+        <OpinionElement key={index} src={el.opinionimage.url} />
       ))}
     </div>
   )

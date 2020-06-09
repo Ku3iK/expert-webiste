@@ -5,11 +5,8 @@ import Partner from "./Partner"
 import P2 from "../P2/P2"
 import H1 from "../H1/H1"
 import Button from "../Button/Button"
-import img1 from "../../../static/durtexLogo.png"
-import img2 from "../../../static/fartProductLogo.png"
 
 const Partners = ({ title, partners, buttonContent, isDE }) => {
-  console.log(partners)
   return (
     <PratnersWrapper>
       <H1>{title}</H1>

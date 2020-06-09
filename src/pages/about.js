@@ -1,43 +1,24 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from 'gatsby'
+
 import AboutUsElement from "../components/AboutUsElement/AboutUsElement"
 import H1 from "../components/H1/H1"
-
-import img1 from "../assets/images/about1.svg"
-import img2 from "../assets/images/about2.svg"
-
-import opinion1 from "../assets/images/opinion/opinia1.jpg"
-import opinion2 from "../assets/images/opinion/opinia2.jpg"
-import opinion3 from "../assets/images/opinion/opinia3.jpg"
-import opinion4 from "../assets/images/opinion/opinia4.jpg"
-import opinion5 from "../assets/images/opinion/opinia5.jpg"
-import opinion6 from "../assets/images/opinion/opinia6.jpg"
-import opinion7 from "../assets/images/opinion/opinia7.jpg"
 import Opinion from "../components/Opinion/Opinion"
 
-const NotFoundPage = () => {
+const About = ({ data }) => {
   const aboutData = [
     {
-      img: img1,
-      content:
-        "Expert to firma z tradycjami i jakością świadczonych usług, które cieszą się ogromnym uznaniem i zadowoleniem klientów. Zapraszamy do zapoznania się z ofertą.",
+      img: data.allDatoCmsContent.nodes[0].whatarewedoingimage.url,
+      content: data.allDatoCmsContent.nodes[0].whatarewedoing,
     },
     {
-      img: img2,
-      content:
-        "Firma Expert od lat zajmuje się montażami stolarki otworowej, posiadamy w swojej ofercie szeroką gamę produktów, które z pewnością spełnią Państwa wymagania.",
+      img: data.allDatoCmsContent.nodes[0].whoweareimage.url,
+      content: data.allDatoCmsContent.nodes[0].whoweare,
     },
   ]
+  const opinionData = data.allDatoCmsOpinion.nodes;
 
-  const opinionData = [
-    opinion1,
-    opinion2,
-    opinion3,
-    opinion4,
-    opinion5,
-    opinion6,
-    opinion7,
-  ]
   return (
     <Container>
       <H1>Kim jesteśmy?</H1>
@@ -47,7 +28,7 @@ const NotFoundPage = () => {
         content={aboutData[1].content}
         isFirst
       />
-      <H1>Nasze opinie</H1>
+      <H1>Opinie</H1>
       <OpinionContainer>
         <Opinion opinionData={opinionData} />
       </OpinionContainer>
@@ -55,7 +36,32 @@ const NotFoundPage = () => {
   )
 }
 
-export default NotFoundPage
+export const query = graphql`
+  query aboutPage {
+    allDatoCmsOpinion {
+      nodes {
+        id
+        opinionimage {
+          url
+        }
+      }
+    }
+    allDatoCmsContent {
+      nodes {
+        whoweare
+        whatarewedoing
+        whoweareimage {
+          url
+        }
+        whatarewedoingimage {
+          url
+        }
+      }
+    }
+  }
+`
+
+export default About
 
 const Container = styled.div`
   margin: 12rem 0 10rem;

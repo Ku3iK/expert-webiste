@@ -1,37 +1,51 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from 'gatsby'
+
 import H1 from "../components/H1/H1"
 import Form from "../components/Form/Form"
 import P2 from "../components/P2/P2"
 import ContactInformation from "../components/ContactInformations/ContactInformation"
 
-const Contact = () => (
+const Contact = ({ data }) => (
   <ContactPage>
     <H1>Napisz do nas</H1>
     <div className="contactWrapper">
       <div>
-        <P2>
-          Zapraszamy do kontaktu z nami poprzez formularz zgłoszeniowy lub
-          kontakt telefoniczny i mailowy. Pamiętaj, kto pyta, nie błądzi! Chętnie odpowiemy na twoję pytania, rozwiejemy wątpliwości i doradzimy w wyborze produktów.
-        </P2>
+        <P2>{data.allDatoCmsContent.nodes[0].contactcontent}</P2>
         <div>
-          <ContactInformation title="telefon" content="534 534 542" />
+          <ContactInformation
+            title="telefon"
+            content={data.allDatoCmsContent.nodes[0].phone} />
           <ContactInformation
             title="mail"
-            content="expert.szczenic@gmial.com"
+            content={data.allDatoCmsContent.nodes[0].mail}
           />
           <ContactInformation
             title="adres"
-            content="ul. blafsfsd 45 45-532 Szczecin"
+            content={data.allDatoCmsContent.nodes[0].address}
           />
         </div>
       </div>
       <div>
-        <Form />
+        <Form labels={["Tytuł", "Mail", "Pytanie do nas", "Wyślij"]} />
       </div>
     </div>
   </ContactPage>
 )
+
+export const query = graphql`
+  query ContactPage {
+    allDatoCmsContent {
+      nodes {
+        contactcontent
+        mail
+        phone
+        address
+      }
+    }
+  }
+`
 
 export default Contact
 

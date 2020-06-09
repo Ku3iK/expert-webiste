@@ -9,7 +9,7 @@ import P1 from '../P1/P1';
 import Logo from "../../assets/icons/logoBigWhite.inline.svg";
 import HeaderImg from '../../../static/headerImage.jpg';
 
-const Header = props => {
+const Header = ({ children }) => {
     const data = useStaticQuery(graphql`
         query queryForHeroImage {
         file(name: {eq: "headerImage"}) {
@@ -26,7 +26,7 @@ const Header = props => {
             <HeaderBaner>
                 <div className="wrapper">
                     <Logo />
-                    <P1>I trochę dłuższy podtest pasujący do tego u góry, dopełnienie założenia firmy, coś ważnego co chciałby zobaczyć klient po wejściu na stronę.</P1>
+                    <P1>{children}</P1>
                 </div>
                 <Img objectFit="cover" objectPosition="50% 50%" fluid={data.file.childImageSharp.fluid} />
             </HeaderBaner>

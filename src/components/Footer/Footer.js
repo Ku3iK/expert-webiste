@@ -31,7 +31,7 @@ const Footer = ({ routes, text, authors }) => {
                         infoEl.map(({ text, link }) => <a href={link} rel="noopener noreferrer" target="_blank" key={text}><FooterButton>{text}</FooterButton></a>)
                     }
                 </div>
-                <p className="authors" >{authors} <span>Mikołaja Zienkowicza i Jakuba Kaczmarka</span></p>
+                <p className="authors" >{authors} <span>Mikołaj Zienkowicz i Jakub Kaczmarek</span></p>
             </div>
         </FooterWrapper>
     );

@@ -9,7 +9,9 @@ const IndexPage = ({ data }) => {
   const partners = data.allDatoCmsPartner.nodes
   return (
     <>
-      <Carousel title="Okna, drzwi, rolety, bramy" />
+      <Carousel title="Okna, drzwi, rolety, bramy" elements={data.allDatoCmsSlider.nodes.map(({ elementname, elementimage }) => {
+        return { name: elementname, url: elementimage.url }
+      })} />
       <Partners
         title="Nasi partnerzy"
         partners={partners}
@@ -53,8 +55,15 @@ export const query = graphql`
         }
       }
     }
+    allDatoCmsSlider {
+      nodes {
+        elementname
+        elementimage {
+          url
+        }
+      }
+    }
   }
-
 `
 
 export default IndexPage

@@ -60,7 +60,7 @@ const CarouselElementWrapper = styled.div`
     width: 400px;
     margin: 2rem 10rem;
     h3 {
-      font-size: ${({ theme }) => theme.font.l};
+      font-size: ${({ theme }) => theme.font.m};
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
       width: 300px;
