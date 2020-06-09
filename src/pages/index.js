@@ -48,6 +48,9 @@ export const query = graphql`
         partnerdescription
         parnerpagelink
         partnername
+        partnerimage {
+          url
+        }
       }
     }
   }

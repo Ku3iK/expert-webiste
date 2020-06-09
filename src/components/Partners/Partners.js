@@ -9,12 +9,13 @@ import img1 from "../../../static/durtexLogo.png"
 import img2 from "../../../static/fartProductLogo.png"
 
 const Partners = ({ title, partners, buttonContent, isDE }) => {
+  console.log(partners)
   return (
     <PratnersWrapper>
       <H1>{title}</H1>
       <div className="wrapper">
-        {partners.map(({ partnerdescription, partnerdescriptionde, parnerpagelink }, index) => (
-          <Partner key={index}>
+        {partners.map(({ partnerdescription, partnerdescriptionde, parnerpagelink, partnerimage }, index) => (
+          <Partner key={index} file={partnerimage.url}>
             <P2>{isDE ? partnerdescriptionde : partnerdescription}</P2>
             <Button to={parnerpagelink}>{buttonContent}</Button>
           </Partner>
