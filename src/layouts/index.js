@@ -41,6 +41,13 @@ const Layout = ({ children, location }) => {
           name="keywords"
           content="Gorzów Wielkopolski, Gorzów, Drezdenko, Strzelce krajeńskie, Kłodawa, Barlinek, Lipiany, Myślibórz, Chojna, Mieszkowice, Dębno, Kostrzyn nad odrą, Krzeszyce, Deszczno, Bogdaniec, Witnica, Ośno lubuskie, Sulęcin, Międzyrzecz, Przytoczna, Tęczyce, Lubniewice, Pszczew, Słońsk, Świecko, Rzepin, Słubice, okna, drzwi, rolety, bramy garażowe, okna PCV, okna drewniane, okna aluminiowe, konigurator okien, drzwi pcv, monraż okien Gorzów Wielkopolski, montaż drzwi Gorzów Wielkopolski, montaż okien, drutex, Fart Produkt, montaż stolarki otworowej, stolarka otworowa"
         />
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff"></meta>
       </Helmet>
       <div id="pageWrapper">
         <GlobalStyle />
