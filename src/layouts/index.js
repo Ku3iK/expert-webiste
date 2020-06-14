@@ -28,7 +28,9 @@ const Layout = ({ children, location }) => {
   const { headercontentde, heaercontent, footercontentde, footercontent } = allDatoCmsContent.nodes[0]
   return (
     <ThemeProvider theme={theme}>
-      <Helmet>
+      <Helmet
+        htmlAttributes={{ "lang": /^\/de.*$/.test(location.pathname) ? "de" : "pl" }}
+      >
         <meta charSet="utf-8" />
         <title>EXPERT</title>
         <meta
@@ -42,14 +44,13 @@ const Layout = ({ children, location }) => {
       </Helmet>
       <div id="pageWrapper">
         <GlobalStyle />
-        <Nav routes={routes} />
         {/^\/de.*$/.test(location.pathname) ? (
-          <Nav routes={routesDe} />
+          <Nav routes={routesDe} isPolish={true} location={location} />
         ) : (
-            <Nav routes={routes} />
+            <Nav routes={routes} location={location} />
           )}
         {location.pathname === "/" ? <Header>{heaercontent}</Header> : null}
-        {location.pathname === "/de" ? <Header>{headercontentde}</Header> : null}
+        {location.pathname === "/de/" ? <Header>{headercontentde}</Header> : null}
         <main>{children}</main>
         {/^\/de.*$/.test(location.pathname)
           ? <Footer routes={routesDe} text={footercontentde} authors={"Die Website wurde entworfen und erstellt von:"} />

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from "gatsby"
 import Logo from "../../assets/icons/logoSmall.inline.svg";
+import LangButton from '../LangButton/LangButton';
 
-const Nav = ({ routes }) => {
+const Nav = ({ routes, isPolish, location }) => {
     const [isNavVisible, setNavVisibility] = useState(false);
     return (
         <Container isNavVisible={isNavVisible}>
@@ -20,6 +21,7 @@ const Nav = ({ routes }) => {
                 <div></div>
                 <div></div>
             </div>
+            <LangButton isPolish={isPolish ? isPolish : null} location={location} />
         </Container>
     );
 }
