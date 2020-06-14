@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 import makePathToRedirect from '../../utils/makePathToRedirect';
 
 const LangButton = ({ isPolish, location }) => {
-    console.log(location)
     const redirectPath = makePathToRedirect(location.pathname, isPolish);
     return (
         <LangButtonWrapper to={redirectPath}>

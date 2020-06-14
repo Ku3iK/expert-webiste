@@ -7,7 +7,6 @@ import H1 from "../../components/H1/H1"
 import Opinion from "../../components/Opinion/Opinion"
 
 const About = ({ data }) => {
-  console.log(data)
   const aboutData = [
     {
       img: data.allDatoCmsContent.nodes[0].whatarewedoingimage.url,
