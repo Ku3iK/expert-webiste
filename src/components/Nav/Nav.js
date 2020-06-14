@@ -89,7 +89,7 @@ const Container = styled.nav`
             max-width: 450px;
             height: 100vh;
             padding: 70px 0;
-            z-index: 100;
+            z-index: 10000;
             border-right: 5px solid ${({ theme }) => theme.color.primary}; 
             li {
                 text-align: center;
@@ -98,10 +98,11 @@ const Container = styled.nav`
         .burger {
             display: flex;
             opacity: 1;
+            z-index: 10002
         }
         & > a{
             position: relative;
-            z-index: 101;
+            z-index: 10001;
         }
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {

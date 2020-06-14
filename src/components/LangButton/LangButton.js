@@ -15,10 +15,15 @@ const LangButton = ({ isPolish, location }) => {
 export default LangButton;
 
 const LangButtonWrapper = styled(Link)`
-    position: absolute;
+    position: absolute !important;
     top: auto;
     bottom: -50px;
     right: 10px;
     height: auto;
     cursor: pointer;
+    z-index: 10;
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        bottom: -40px;
+        right: 15px;
+    }
 `;
