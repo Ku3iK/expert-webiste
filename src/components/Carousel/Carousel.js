@@ -2,8 +2,6 @@ import React, { useState } from "react"
 import CarouselElement from "./CarouselElemnt"
 import styled from "styled-components"
 import H1 from "../H1/H1"
-import woodenWindow from "../../../static/oknaDrewniane.png"
-import aluminiumWindow from "../../../static/oknaAluminiowe.png"
 
 const Carousel = ({ title, elements }) => {
   const [activeElementsIndex, setActiveElementsIndex] = useState([0, 1, 2])
