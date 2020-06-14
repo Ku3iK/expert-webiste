@@ -14,7 +14,9 @@ const Partners = ({ title, partners, buttonContent, isDE }) => {
         {partners.map(({ partnerdescription, partnerdescriptionde, parnerpagelink, partnerimage }, index) => (
           <Partner key={index} file={partnerimage.url}>
             <P2>{isDE ? partnerdescriptionde : partnerdescription}</P2>
-            <Button to={parnerpagelink}>{buttonContent}</Button>
+            <a href={parnerpagelink} target="_blank" rel="noopener noreferrer">
+              <Button to={parnerpagelink}>{buttonContent}</Button>
+            </a>
           </Partner>
         ))}
       </div>
