@@ -60,12 +60,14 @@ const CarouselElementWrapper = styled.div`
   &.active {
     position: relative;
     width: 400px;
+    height: 500px;
     margin: 2rem 10rem;
     h3 {
       font-size: ${({ theme }) => theme.font.m};
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
       width: 300px;
+      height: 400px;
       margin: 2rem 6rem;
     }
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
