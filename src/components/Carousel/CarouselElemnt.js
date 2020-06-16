@@ -20,6 +20,7 @@ const CarouselElementWrapper = styled.div`
   background-color: ${({ theme }) => theme.color.white};
   padding: 1rem 3rem;
   width: 300px;
+  height: 400px;
   img {
     width: 100%;
     padding: 0 2rem;
@@ -66,7 +67,7 @@ const CarouselElementWrapper = styled.div`
       width: 300px;
       margin: 2rem 6rem;
     }
-    @media (max-width: ${({ theme }) => theme.breakpoints.tablet})  {
+    @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
       h3 {
         font-size: ${({ theme }) => theme.font.m};
       }
