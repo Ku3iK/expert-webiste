@@ -40,6 +40,7 @@ const CarouselElementWrapper = styled.div`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.smallDesktop}) {
     width: 200px;
+    height: 300px;
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 200px;
