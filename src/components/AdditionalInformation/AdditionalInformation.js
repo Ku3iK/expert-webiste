@@ -4,6 +4,7 @@ import H1 from "../H1/H1"
 import InfoElement from "./InfoElement"
 
 const AdditionalInformation = ({
+  title,
   nip,
   regon,
   companyName,
@@ -12,7 +13,7 @@ const AdditionalInformation = ({
   secondBankAccount,
 }) => (
   <AdditionalInformationWrapper>
-    <H1>Więcej informacji</H1>
+    <H1>{title}</H1>
     <div className="wrapper">
       <InfoElement>{nip}</InfoElement>
       <InfoElement>{regon}</InfoElement>
